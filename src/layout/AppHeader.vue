@@ -17,7 +17,7 @@
             </div>
 
             <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-                <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl">
+                <!-- <base-dropdown class="nav-item" menu-classes="dropdown-menu-xl">
                     <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
                         <i class="ni ni-ui-04 d-lg-none"></i>
                         <span class="nav-link-inner--text">Components</span>
@@ -46,7 +46,7 @@
                             </div>
                         </a>
                     </div>
-                </base-dropdown>
+                </base-dropdown> -->
                 <base-dropdown tag="li" class="nav-item">
                     <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
                         <i class="ni ni-collection d-lg-none"></i>
@@ -58,7 +58,7 @@
                     <router-link to="/cadastrarPessoa" class="dropdown-item">Register</router-link>
                 </base-dropdown>
             </ul>
-            <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+            <!-- <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                 <li class="nav-item">
                     <a class="nav-link nav-link-icon" href="https://www.facebook.com/creativetim" target="_blank" rel="noopener"
                        data-toggle="tooltip" title="Like us on Facebook">
@@ -96,7 +96,7 @@
                         <span class="nav-link-inner--text">Download</span>
                     </a>
                 </li>
-            </ul>
+            </ul> -->
         </base-nav>
     </header>
 </template>

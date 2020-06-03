@@ -7,6 +7,8 @@ import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import CadastrarPessoa from "./views/CadastrarPessoa";
+import CadastrarEndereco from "./views/CadastrarEndereco";
+import CadastrarExames from "./views/CadastrarExames";
 import Profile from "./views/Profile.vue";
 
 Vue.use(Router);
@@ -38,6 +40,24 @@ export default new Router({
       components: {
         header: AppHeader,
         default: CadastrarPessoa,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/cadastrarEndereco",
+      name: "cadastrarEndereco",
+      components: {
+        header: AppHeader,
+        default: CadastrarEndereco,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/cadastrarExames",
+      name: "cadastrarExames",
+      components: {
+        header: AppHeader,
+        default: CadastrarExames,
         footer: AppFooter
       }
     },

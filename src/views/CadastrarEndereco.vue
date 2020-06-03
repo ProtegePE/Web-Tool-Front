@@ -19,51 +19,46 @@
                           class="border-0">
                         <template>
                             <div class="text-muted text-center mb-3">
-                                <small>Cadastar Pessoa</small>
+                                <small>Cadastar Endereco</small>
                             </div>
-                            <!-- <div class="btn-wrapper text-center">
-                                <base-button type="neutral">
-                                    <img slot="icon" src="img/icons/common/github.svg">
-                                    Github
-                                </base-button>
-
-                                <base-button type="neutral">
-                                    <img slot="icon" src="img/icons/common/google.svg">
-                                    Google
-                                </base-button>
-                            </div> -->
                         </template>
                         <template>
-                            <!-- <div class="text-center text-muted mb-4">
-                                <small>Or sign up with credentials</small>
-                            </div> -->
                             <form role="form">
                                 <base-input alternative
                                             class="mb-3"
-                                            placeholder="Nome"
-                                            addon-left-icon="ni ni-single-02">
+                                            placeholder="Logradouro"
+                                            addon-left-icon="ni ni-square-pin">
                                 </base-input>
                                 <base-input alternative
                                             class="mb-3"
-                                            placeholder="CPF"
-                                            addon-left-icon="ni ni-badge">
+                                            placeholder="Complemento"
+                                            addon-left-icon="ni ni-square-pin">
                                 </base-input>
                                 <base-input alternative
                                             class="mb-3"
-                                            placeholder="RG"
-                                            addon-left-icon="ni ni-badge">
+                                            placeholder="Numero"
+                                            addon-left-icon="ni ni-square-pin">
                                 </base-input>
                                  <base-input alternative
                                             class="mb-3"
-                                            placeholder="CNS"
-                                            addon-left-icon="ni ni-badge">
+                                            placeholder="Bairro"
+                                            addon-left-icon="ni ni-square-pin">
                                 </base-input>
                                 <base-input alternative
                                             class="mb-3"
-                                            placeholder="Telefone"
-                                            addon-left-icon="ni ni-mobile-button">
+                                            placeholder="Cidade"
+                                            addon-left-icon="ni ni-square-pin">
                                 </base-input>
-                               
+                                <base-input alternative
+                                            class="mb-3"
+                                            placeholder="UF"
+                                            addon-left-icon="ni ni-square-pin">
+                                </base-input>
+                               <base-input alternative
+                                            class="mb-3"
+                                            placeholder="Cep"
+                                            addon-left-icon="ni ni-square-pin">
+                                </base-input>
                                 <!-- <base-input alternative
                                             type="password"
                                             placeholder="Password"
@@ -80,9 +75,7 @@
                                     </span>
                                 </base-checkbox> -->
                                 <div class="text-center">
-                                    <router-link to="/cadastrarEndereco" class="mt-4">
-                                        <base-button type="primary" class="my-4">Cadastrar</base-button>
-                                    </router-link>
+                                    <base-button type="primary" class="my-4">Cadastrar</base-button>
                                 </div>
                             </form>
                         </template>

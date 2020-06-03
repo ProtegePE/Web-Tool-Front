@@ -19,13 +19,11 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <h1 class="display-3  text-white">WebTool
-                                    <span>completed with examples</span>
+                                    <!-- <span>completed with examples</span> -->
                                 </h1>
-                                <p class="lead  text-white">The design system comes with four pre-built pages to help
-                                    you get started faster. You can change the text and images and you're good to
-                                    go.</p>
+                                <p class="lead  text-white">colocar algum texto...</p>
                                 <div class="btn-wrapper">
-                                    <base-button tag="a"
+                                    <!-- <base-button tag="a"
                                                  href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html"
                                                  class="mb-3 mb-sm-0"
                                                  type="info"
@@ -38,7 +36,7 @@
                                                  type="white"
                                                  icon="ni ni-cloud-download-95">
                                         Download HTML
-                                    </base-button>
+                                    </base-button> -->
                                 </div>
                             </div>
                         </div>
@@ -64,7 +62,7 @@
                                         <badge type="primary" rounded>system</badge>
                                         <badge type="primary" rounded>creative</badge>
                                     </div>                                    
-                                    <router-link to="/cadastrarPessoa" class="mt-4">
+                                    <router-link to="/cadastrarPessoa">
                                         <base-button tag="a" href="#" type="primary" class="mt-4">
                                             Cadastrar Pessoa
                                         </base-button>
@@ -84,16 +82,18 @@
                                         <badge type="success" rounded>vision</badge>
                                         <badge type="success" rounded>success</badge>
                                     </div>
-                                    <base-button tag="a" href="#" type="success" class="mt-4">
-                                        Learn more
-                                    </base-button>
+                                    <router-link to="/cadastrarExames">
+                                        <base-button tag="a" href="#" type="success" class="mt-4">
+                                            Cadastrar Exames
+                                        </base-button>
+                                    </router-link>
                                 </card>
                             </div>
                             <div class="col-lg-4">
                                 <card class="border-0" hover shadow body-classes="py-5">
                                     <icon name="ni ni-planet" type="warning" rounded class="mb-4">
                                     </icon>
-                                    <h6 class="text-warning text-uppercase">Dasboard</h6>
+                                    <h6 class="text-warning text-uppercase">Relatório</h6>
                                     <p class="description mt-3">Argon is a great free UI package based on Bootstrap
                                         4 that includes the most important components and features.</p>
                                     <div>
@@ -101,9 +101,11 @@
                                         <badge type="warning" rounded>product</badge>
                                         <badge type="warning" rounded>launch</badge>
                                     </div>
-                                    <base-button tag="a" href="#" type="warning" class="mt-4">
-                                        Learn more
-                                    </base-button>
+                                    <router-link to="/">
+                                        <base-button tag="a" href="#" type="warning" class="mt-4">
+                                            Relatórios
+                                        </base-button>
+                                    </router-link>
                                 </card>
                             </div>
                         </div>
