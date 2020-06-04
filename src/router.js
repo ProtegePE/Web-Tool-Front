@@ -9,9 +9,12 @@ import Register from "./views/Register.vue";
 import Profile from "./views/Profile.vue";
 
 import CadastrarPessoa from "./views/Pessoa/CadastrarPessoa";
+import AlterarPessoa from "./views/Pessoa/AlterarPessoa";
 import CadastrarEndereco from "./views/CadastrarEndereco";
-import CadastrarExames from "./views/Exame/CadastrarExames";
-import Relatorio from "./views/Relatorio/Relatorios";
+import CadastrarExame from "./views/Exame/CadastrarExame";
+import Relatorio from "./views/Relatorio/Relatorio";
+import ListarPessoa from "./views/Pessoa/ListarPessoa";
+import ListarExame from "./views/Exame/ListarExame";
 
 Vue.use(Router);
 
@@ -46,6 +49,15 @@ export default new Router({
       }
     },
     {
+      path: "/alterarPessoa",
+      name: "alterarPessoa",
+      components: {
+        header: AppHeader,
+        default: AlterarPessoa,
+        footer: AppFooter
+      }
+    },
+    {
       path: "/cadastrarEndereco",
       name: "cadastrarEndereco",
       components: {
@@ -55,20 +67,38 @@ export default new Router({
       }
     },
     {
-      path: "/cadastrarExames",
-      name: "cadastrarExames",
+      path: "/cadastrarExame",
+      name: "cadastrarExame",
       components: {
         header: AppHeader,
-        default: CadastrarExames,
+        default: CadastrarExame,
         footer: AppFooter
       }
     },
     {
-      path: "/relatorios",
-      name: "relatorios",
+      path: "/relatorio",
+      name: "relatorio",
       components: {
         header: AppHeader,
         default: Relatorio,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/ListarPessoa",
+      name: "listarPessoa",
+      components: {
+        header: AppHeader,
+        default: ListarPessoa,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/ListarExame",
+      name: "listarExame",
+      components: {
+        header: AppHeader,
+        default: ListarExame,
         footer: AppFooter
       }
     },

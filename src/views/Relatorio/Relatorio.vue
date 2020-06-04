@@ -72,7 +72,7 @@
               slot="title"
               type="primary"
               class="dropdown-toggle mb-1 text-normal"
-            >Data</base-button>
+            >outros...</base-button>
             <a
               v-for="(s, index) in statuss"
               :key="index"

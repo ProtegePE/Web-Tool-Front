@@ -8,7 +8,7 @@
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
                 <div class="col-6 collapse-brand">
                     <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/">
-                        <img src="img/brand/blue.png">
+                        <img src="@/imagens/Pq-12.png" style="width: 160px; height:80px">
                     </a>
                 </div>
                 <div class="col-6 collapse-close">
@@ -56,7 +56,7 @@
                 </base-dropdown>
 
                 <base-dropdown tag="li" class="nav">
-                    <a slot="title" href="/#/relatorios" class="nav-link" data-toggle="dropdown" role="button">
+                    <a slot="title" href="/#/relatorio" class="nav-link" data-toggle="dropdown" role="button">
                         <i class="ni ni-collection d-lg-none"></i>
                         <span class="nav-link-inner--text">Relatório</span>
                     </a>
@@ -68,7 +68,7 @@
                         <span class="nav-link-inner--text">Pessoa</span>
                     </a>
                     <router-link to="/cadastrarPessoa" class="dropdown-item">Cadastrar</router-link>
-                    <router-link to="/" class="dropdown-item">Listar</router-link>
+                    <router-link to="/ListarPessoa" class="dropdown-item">Listar</router-link>
                 </base-dropdown>
 
                 <base-dropdown tag="li" class="nav-item">
@@ -76,8 +76,8 @@
                         <i class="ni ni-collection d-lg-none"></i>
                         <span class="nav-link-inner--text">Exames</span>
                     </a>
-                    <router-link to="/cadastrarExames" class="dropdown-item">Cadastrar</router-link>
-                    <router-link to="/" class="dropdown-item">Listar</router-link>
+                    <router-link to="/cadastrarExame" class="dropdown-item">Cadastrar</router-link>
+                    <router-link to="/ListarExame" class="dropdown-item">Listar</router-link>
                 </base-dropdown>
 
                 <base-dropdown tag="li" class="nav-item">

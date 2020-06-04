@@ -72,9 +72,9 @@
                             </div>
                             <div class="col-lg-4">
                                 <card class="border-0" hover shadow body-classes="py-5">
-                                    <icon name="ni ni-istanbul" type="success" rounded class="mb-4">
+                                    <icon name="ni ni-istanbul" type="primary" rounded class="mb-4">
                                     </icon>
-                                    <h6 class="text-success text-uppercase">Cadastrar Exames</h6>
+                                    <h6 class="text-primary text-uppercase">Listar Pessoas</h6>
                                     <!-- <p class="description mt-3">Argon is a great free UI package based on Bootstrap
                                         4 that includes the most important components and features.</p>
                                     <div>
@@ -82,9 +82,9 @@
                                         <badge type="success" rounded>vision</badge>
                                         <badge type="success" rounded>success</badge>
                                     </div> -->
-                                    <router-link to="/cadastrarExames">
-                                        <base-button tag="a" href="#" type="success" class="mt-4">
-                                            Cadastrar
+                                    <router-link to="/ListarPessoa">
+                                        <base-button tag="a" href="#" type="primary" class="mt-4">
+                                            Listar  
                                         </base-button>
                                     </router-link>
                                 </card>
@@ -101,9 +101,9 @@
                                         <badge type="warning" rounded>product</badge>
                                         <badge type="warning" rounded>launch</badge>
                                     </div> -->
-                                    <router-link to="/relatorios">
+                                    <router-link to="/relatorio">
                                         <base-button tag="a" href="#" type="warning" class="mt-4">
-                                            Relatórios
+                                            Listar Relatórios
                                         </base-button>
                                     </router-link>
                                 </card>

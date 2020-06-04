@@ -19,7 +19,7 @@
                           class="border-0">
                         <template>
                             <div class="text-muted text-center mb-3">
-                                <small>Cadastar Pessoa</small>
+                                <small>Dados de Pessoa</small>
                             </div>
                             <!-- <div class="btn-wrapper text-center">
                                 <base-button type="neutral">
@@ -71,10 +71,10 @@
                                             addon-left-icon="ni ni-mobile-button">
                                 </base-input>
                                 <div class="text-muted text-center mb-3">
-                                    <small>Cadastar Endereço</small>
+                                    <small>Dados de Endereço</small>
                                 </div>
                                 <!-- <p>Logradouro</p> -->
-                               <base-input alternative
+                               <base-input alternative 
                                             class="mb-3"
                                             placeholder="Logradouro"
                                             v-model="pessoa.logradouro"
@@ -118,7 +118,7 @@
                                             addon-left-icon="ni ni-square-pin">
                                 </base-input>
                                 <div class="text-center">
-                                    <base-button type="primary" @click="cadastrar" class="my-4">Cadastrar</base-button>
+                                    <base-button type="primary" @click="alterar" class="my-4">Alterar</base-button>
                                 </div>
                             </form>
                         </template>
@@ -135,65 +135,47 @@ import axios from "axios";
 export default {
     components: {},
     
+    mounted(){        
+        let dadosPessoa = JSON.parse(localStorage.getItem("dados-pessoa"))
+        if(dadosPessoa){
+            this.pessoa = {
+                id: dadosPessoa.id,
+                nome: dadosPessoa.nome,
+                cpf: dadosPessoa.cpf,
+                rg: dadosPessoa.rg,
+                cns: dadosPessoa.cns,
+                telefone: dadosPessoa.telefone,
+                logradouro: dadosPessoa.enderecos[0].logradouro,
+                complemento: dadosPessoa.enderecos[0].complemento,
+                numero: dadosPessoa.enderecos[0].numero,
+                bairro: dadosPessoa.enderecos[0].bairro,
+                cidade: dadosPessoa.enderecos[0].cidade,
+                cep: dadosPessoa.enderecos[0].cep,
+                uf: dadosPessoa.enderecos[0].uf
+            }  
+        }   
+    },
+
     data(){
         return {
-            pessoa:{
-                nome: '',
-                cpf: '',
-                rg: '',
-                cns: '',
-                telefone: '',
-                //endereco
-                logradouro: '',
-                complemento: '',
-                numero: '',
-                bairro: '',
-                cidade: '',
-                uf: '',
-                cep: ''
-            },
-            alterarPessoa:{},
+            pessoa:{},
             error: false,
             respErro: ''
         }
     },
 
     methods: {
-         cadastrar(){  
-            var flag = false
-            if(this.pessoa.nome == ''){
-                this.respErro = 'Nome'
-                this.error = true
-                flag = true
-            }
-            if(this.pessoa.cpf == ''){
-                this.respErro = this.respErro+', CPF'
-                this.error = true
-                flag = true
-            }           
-            if(flag) return
-
+        async alterar(){
             const request = axios.create();
             const baseUrl = "https://web-tool-api.herokuapp.com";
-            request
-                .post(`${baseUrl}/pessoa`, this.pessoa).then((res) => {
-                    console.log("deu certo ==> ", res)
-                    alert("Deu Certo")
-                })
-                .catch((err) => {
-                    console.log(err);
-                });
-                // this.$router.push('/cadastrarEndereco') //rotas
-        },
-        alterar(){
-            const request = axios.create();
-            const baseUrl = "https://web-tool-api.herokuapp.com";
-            request
-                .put(`${baseUrl}/pessoa/id`, {
-                    headers: { pessoa_id: this.pessoas[index].id },
+            await request
+                .put(`${baseUrl}/pessoa/id`, this.pessoa, {
+                    headers: { pessoa_id: this.pessoa.id },
                 })
                 .then((res) => {
                     alert("deu certo")
+                    // console.log("RES ===>", res);
+                    localStorage.removeItem('dados-pessoa');                    
                     this.$router.push('/ListarPessoa')
                 })
                 .catch((err) => {

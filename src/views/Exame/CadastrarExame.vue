@@ -24,6 +24,11 @@
                         </template>
                         <template>
                             <form role="form">
+                                <base-input alternative
+                                            class="mb-3"
+                                            placeholder="CPF da Pessoa"
+                                            addon-left-icon="ni ni-badge">
+                                </base-input>
                                 <dropdown>
                                    <base-button slot="title" type="secondary" class="dropdown-toggle">
                                         Tipo do Exame
