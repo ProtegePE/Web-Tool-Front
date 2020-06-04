@@ -55,16 +55,16 @@
                                     <icon name="ni ni-check-bold" type="primary" rounded class="mb-4">
                                     </icon>
                                     <h6 class="text-primary text-uppercase">Cadastrar Pessoa</h6>
-                                    <p class="description mt-3">Argon is a great free UI package based on Bootstrap 4
+                                    <!-- <p class="description mt-3">Argon is a great free UI package based on Bootstrap 4
                                         that includes the most important components and features.</p>
                                     <div>
                                         <badge type="primary" rounded>design</badge>
                                         <badge type="primary" rounded>system</badge>
                                         <badge type="primary" rounded>creative</badge>
-                                    </div>                                    
+                                    </div>                                     -->
                                     <router-link to="/cadastrarPessoa">
                                         <base-button tag="a" href="#" type="primary" class="mt-4">
-                                            Cadastrar Pessoa
+                                            Cadastrar
                                         </base-button>
                                     </router-link>
 
@@ -75,16 +75,16 @@
                                     <icon name="ni ni-istanbul" type="success" rounded class="mb-4">
                                     </icon>
                                     <h6 class="text-success text-uppercase">Cadastrar Exames</h6>
-                                    <p class="description mt-3">Argon is a great free UI package based on Bootstrap
+                                    <!-- <p class="description mt-3">Argon is a great free UI package based on Bootstrap
                                         4 that includes the most important components and features.</p>
                                     <div>
                                         <badge type="success" rounded>business</badge>
                                         <badge type="success" rounded>vision</badge>
                                         <badge type="success" rounded>success</badge>
-                                    </div>
+                                    </div> -->
                                     <router-link to="/cadastrarExames">
                                         <base-button tag="a" href="#" type="success" class="mt-4">
-                                            Cadastrar Exames
+                                            Cadastrar
                                         </base-button>
                                     </router-link>
                                 </card>
@@ -94,14 +94,14 @@
                                     <icon name="ni ni-planet" type="warning" rounded class="mb-4">
                                     </icon>
                                     <h6 class="text-warning text-uppercase">Relatório</h6>
-                                    <p class="description mt-3">Argon is a great free UI package based on Bootstrap
+                                    <!-- <p class="description mt-3">Argon is a great free UI package based on Bootstrap
                                         4 that includes the most important components and features.</p>
                                     <div>
                                         <badge type="warning" rounded>marketing</badge>
                                         <badge type="warning" rounded>product</badge>
                                         <badge type="warning" rounded>launch</badge>
-                                    </div>
-                                    <router-link to="/">
+                                    </div> -->
+                                    <router-link to="/relatorios">
                                         <base-button tag="a" href="#" type="warning" class="mt-4">
                                             Relatórios
                                         </base-button>

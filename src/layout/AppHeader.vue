@@ -1,8 +1,8 @@
 <template>
     <header class="header-global">
         <base-nav class="navbar-main" transparent type="" effect="light" expand>
-            <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
-                <img src="img/brand/white.png" alt="logo">
+            <router-link slot="brand" to="/">
+                <img src="@/imagens/Pq-12.png" style="width: 280px;" alt="logo">
             </router-link>
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
@@ -47,6 +47,39 @@
                         </a>
                     </div>
                 </base-dropdown> -->
+                
+                <base-dropdown tag="li" class="nav">
+                    <a slot="title" href="/" class="nav-link" data-toggle="dropdown" role="button">
+                        <i class="ni ni-collection d-lg-none"></i>
+                        <span class="nav-link-inner--text">Início</span>
+                    </a>
+                </base-dropdown>
+
+                <base-dropdown tag="li" class="nav">
+                    <a slot="title" href="/#/relatorios" class="nav-link" data-toggle="dropdown" role="button">
+                        <i class="ni ni-collection d-lg-none"></i>
+                        <span class="nav-link-inner--text">Relatório</span>
+                    </a>
+                </base-dropdown>    
+                
+                <base-dropdown tag="li" class="nav-item">
+                    <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
+                        <i class="ni ni-collection d-lg-none"></i>
+                        <span class="nav-link-inner--text">Pessoa</span>
+                    </a>
+                    <router-link to="/cadastrarPessoa" class="dropdown-item">Cadastrar</router-link>
+                    <router-link to="/" class="dropdown-item">Listar</router-link>
+                </base-dropdown>
+
+                <base-dropdown tag="li" class="nav-item">
+                    <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
+                        <i class="ni ni-collection d-lg-none"></i>
+                        <span class="nav-link-inner--text">Exames</span>
+                    </a>
+                    <router-link to="/cadastrarExames" class="dropdown-item">Cadastrar</router-link>
+                    <router-link to="/" class="dropdown-item">Listar</router-link>
+                </base-dropdown>
+
                 <base-dropdown tag="li" class="nav-item">
                     <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
                         <i class="ni ni-collection d-lg-none"></i>
@@ -57,6 +90,7 @@
                     <router-link to="/login" class="dropdown-item">Login</router-link>
                     <router-link to="/cadastrarPessoa" class="dropdown-item">Register</router-link>
                 </base-dropdown>
+
             </ul>
             <!-- <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                 <li class="nav-item">

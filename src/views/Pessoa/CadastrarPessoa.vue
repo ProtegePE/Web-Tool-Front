@@ -1,6 +1,6 @@
 <template>
     <section class="section section-shaped section-lg my-0">
-        <div class="shape shape-style-1 bg-gradient-default">
+        <div class="shape shape-style-1 bg-gradient-primary">
             <span></span>
             <span></span>
             <span></span>
@@ -80,9 +80,7 @@
                                     </span>
                                 </base-checkbox> -->
                                 <div class="text-center">
-                                    <router-link to="/cadastrarEndereco" class="mt-4">
-                                        <base-button type="primary" class="my-4">Cadastrar</base-button>
-                                    </router-link>
+                                    <base-button type="primary" @click="teste" class="my-4">Continuar Cadastro</base-button>
                                 </div>
                             </form>
                         </template>
@@ -93,7 +91,20 @@
     </section>
 </template>
 <script>
-export default {};
+export default {
+    components: {},
+    data(){
+        return {
+         
+        }
+    }, 
+    methods: {
+        teste: function(){
+            alert("oi")
+            this.$router.push('/cadastrarEndereco') //rotas
+        }
+    }
+};
 </script>
 <style>
 </style>

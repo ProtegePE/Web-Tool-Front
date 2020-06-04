@@ -6,10 +6,12 @@ import Components from "./views/Components.vue";
 import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
-import CadastrarPessoa from "./views/CadastrarPessoa";
-import CadastrarEndereco from "./views/CadastrarEndereco";
-import CadastrarExames from "./views/CadastrarExames";
 import Profile from "./views/Profile.vue";
+
+import CadastrarPessoa from "./views/Pessoa/CadastrarPessoa";
+import CadastrarEndereco from "./views/CadastrarEndereco";
+import CadastrarExames from "./views/Exame/CadastrarExames";
+import Relatorio from "./views/Relatorio/Relatorios";
 
 Vue.use(Router);
 
@@ -58,6 +60,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: CadastrarExames,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/relatorios",
+      name: "relatorios",
+      components: {
+        header: AppHeader,
+        default: Relatorio,
         footer: AppFooter
       }
     },
